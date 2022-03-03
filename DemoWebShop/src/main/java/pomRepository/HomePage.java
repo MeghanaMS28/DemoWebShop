@@ -5,15 +5,22 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+/***
+ * 
+ * @author Meghana M S
+ *
+ */
 public class HomePage {
 
 	public HomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(linkText="Log out") private WebElement logoutButton;
-	
-	@FindBy(partialLinkText="Apparel & Shoes") private WebElement ApparelModuleLink;
+	@FindBy(linkText = "Log out")
+	private WebElement logoutButton;
+
+	@FindBy(partialLinkText = "Apparel & Shoes")
+	private WebElement ApparelModuleLink;
 
 	public WebElement getLogoutButton() {
 		return logoutButton;

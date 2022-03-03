@@ -5,24 +5,37 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+/***
+ * 
+ * @author Meghana M S
+ *
+ */
 public class PaymentMethodInfoPage {
 	public PaymentMethodInfoPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy(xpath = "//input[@onclick='PaymentInfo.save()']")private WebElement clickOnPaymentContinue;
-	
-	@FindBy(id = "CreditCardType")private WebElement clickOnCreditCardTypeDropdown;
-	
-	@FindBy(id = "CardholderName")private WebElement enterCardHolderName;
-	
-	@FindBy(id = "CardNumber")private WebElement enterCardNumber;
-	
-    @FindBy(id = "ExpireMonth")private WebElement selectMonth;
-	
-	@FindBy(id = "ExpireYear")private WebElement selectYear;
-	
-	@FindBy(id = "CardCode")private WebElement enterCardCode;
-	
+
+	@FindBy(xpath = "//input[@onclick='PaymentInfo.save()']")
+	private WebElement clickOnPaymentContinue;
+
+	@FindBy(id = "CreditCardType")
+	private WebElement clickOnCreditCardTypeDropdown;
+
+	@FindBy(id = "CardholderName")
+	private WebElement enterCardHolderName;
+
+	@FindBy(id = "CardNumber")
+	private WebElement enterCardNumber;
+
+	@FindBy(id = "ExpireMonth")
+	private WebElement selectMonth;
+
+	@FindBy(id = "ExpireYear")
+	private WebElement selectYear;
+
+	@FindBy(id = "CardCode")
+	private WebElement enterCardCode;
+
 	public WebElement getClickOnCreditCardTypeDropdown() {
 		return clickOnCreditCardTypeDropdown;
 	}
@@ -43,7 +56,6 @@ public class PaymentMethodInfoPage {
 		return selectYear;
 	}
 
-	
 	public WebElement getEnterCardCode() {
 		return enterCardCode;
 	}
@@ -51,6 +63,5 @@ public class PaymentMethodInfoPage {
 	public WebElement getClickOnPaymentContinue() {
 		return clickOnPaymentContinue;
 	}
-
 
 }
